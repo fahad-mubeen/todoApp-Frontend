@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Todo Application</h1>
+        
+        <div id="auth-container">
+            <div id="auth-form">
+                <h2 id="auth-title">Login</h2>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="button" id="auth-submit">Login</button>
+                <div id="auth-message"></div>
+            </div>
+            <div class="auth-toggle">
+                <span id="auth-toggle-text">Don't have an account? </span>
+                <a id="auth-toggle-link">Sign up</a>
+            </div>
+            <div class="github-link">
+                <a href="https://github.com/fahad-mubeen/todoApp-Frontend" target="_blank" rel="noopener noreferrer">
+                    📂 View Frontend Source Code 
+                </a>
+            </div>
+            
+            <div class="github-link">
+                <a href="https://github.com/fahad-mubeen/todoApp-Backend" target="_blank" rel="noopener noreferrer">
+                    📂 View Backend Source Code 
+                </a>
+            </div>
+        </div>
+        
+        <div id="todo-app">
+            <div id="user-info">
+                <span>Welcome, <strong id="current-user"></strong></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+            
+            <div id="input-area">
+                <input type="text" id="todoTextInput" placeholder="Write your next todo here">
+                <button id="submitButton">Add Todo</button>
+            </div>
+            
+            <div id="filter-btn">
+                <button class="filterBtn active" data-filter="all">All</button>
+                <button class="filterBtn" data-filter="pending">Pending</button>
+                <button class="filterBtn" data-filter="completed">Completed</button>
+            </div>
+            
+            <ul id="todoList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

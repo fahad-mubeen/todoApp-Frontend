@@ -1,0 +1,326 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(250, 246, 242);
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 10px rgb(185, 183, 183);
+    min-height: 100vh;
+}
+
+#auth-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+}
+
+#auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#auth-form input {
+    padding: 12px;
+    border: 1px solid rgb(185, 183, 183);
+    border-radius: 0.3rem;
+    font-size: 16px;
+}
+
+#auth-form button {
+    padding: 12px;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#auth-form button:hover {
+    background-color: rgb(0, 100, 255);
+}
+
+.auth-toggle {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth-toggle a {
+    color: rgb(0, 123, 255);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.github-link {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.github-link a {
+    color: #8102f8;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.github-link a:hover {
+    color: rgb(207, 33, 204);
+}
+
+.error-message {
+    color: #ff6347;
+    font-size: 14px;
+    text-align: center;
+}
+
+.success-message {
+    color: #90ee90;
+    font-size: 14px;
+    text-align: center;
+}
+
+#user-info {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(185, 183, 183);
+    margin-bottom: 20px;
+}
+
+#logout-btn {
+    padding: 8px 16px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: #ff4d3a;
+}
+
+#todo-app {
+    display: none;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#input-area {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#todoTextInput {
+    width: 80%;
+    padding: 2%;
+    border: 1px solid rgb(185, 183, 183);
+    border-radius: 0.3rem;
+}
+
+#submitButton {
+    width: 15%;
+    padding: 2%;
+    background-color: rgb(0, 123, 255);
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+    background-color: rgb(0, 100, 255);
+}
+
+#filter-btn {
+    margin: 2% 0;
+    width: 90%;
+    padding: 2%;
+    background-color: rgb(237, 243, 250);
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#filter-btn > button {
+    padding: 2%;
+    width: 20%;
+    background-color: #f8e068;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#filter-btn > button:hover {
+    background-color: #f8d347;
+}
+
+#filter-btn > button.active {
+    background-color: #f8d347;
+}
+
+ul {
+    list-style-type: none;
+    width: 90%;
+    padding: 0;
+}
+
+.textElement {
+    width: 58%;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4%;
+    border-bottom: 1px solid rgb(185, 183, 183);
+}
+
+.wrapper {
+    width: 38%;
+    display: flex;
+}
+
+.wrapper > button {
+    padding: 4%;
+    margin: 2%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button {
+    background-color: #ff6347;
+}
+
+.complete-button {
+    background-color: #90ee90;
+}
+
+.edit-button {
+    background-color: #f8e068;
+}
+
+.delete-button:hover {
+    background-color: #ff4d3a;
+}
+
+.complete-button:hover {
+    background-color: #7ccf7c;
+}
+
+.edit-button:hover {
+    background-color: #f8d347;
+}
+
+#todoList > li:last-child {
+    border-bottom: none;
+}
+
+.todoCompletedBtn {
+    text-decoration: line-through;
+}
+
+.complete-button {
+    min-width: 79.56px;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    #auth-container {
+        width: 85%;
+        max-width: 350px;
+        padding: 25px;
+        margin: 30px auto;
+    }
+    
+    #filter-btn {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    #filter-btn > button {
+        width: 90%;
+        margin: 2% 0;
+    }
+    
+    .wrapper {
+        width: 30%;
+        flex-direction: column;
+    }
+    
+    .wrapper > button {
+        padding: 10%;
+        margin: 4% 2%
+    }
+    
+    .textElement {
+        width: 68%;
+        letter-spacing: 1px;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    #auth-container {
+        width: 90%;
+        max-width: 320px;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    #auth-form input,
+    #auth-form button {
+        padding: 14px;
+        font-size: 16px;
+    }
+}
